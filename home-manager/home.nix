@@ -48,6 +48,9 @@
     ".xmobarrc" = {
       source = ../xmonad/xmobar.hs;
     };
+    ".config/kitty/kitty.conf" = {
+      source = ../kitty/kitty.conf;
+    }
   };
 
   # Enable home-manager and git
