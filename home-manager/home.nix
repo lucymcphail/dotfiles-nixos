@@ -42,6 +42,12 @@
       source = ../emacs;
       recursive = true;
     };
+    ".config/xmonad/xmonad.hs" = {
+      source = ../xmonad/xmonad.hs;
+    };
+    ".xmobarrc" = {
+      source = ../xmonad/xmobar.hs;
+    };
   };
 
   # Enable home-manager and git
