@@ -14,8 +14,10 @@ Config { font = "xft:Iosevka-10"
        , allDesktops = True
        , overrideRedirect = True
        , textOutputFormat = Ansi
-       , commands = [ Run Cpu ["-L","3","-H","50",
-			       "--normal","green","--high","red"] 10
+       , commands = [ Run Battery ["-t", "<acstatus>: <left>%, <timeleft>",
+                                   "--", "-O", "Charging", "-i", "Charging", "-o", "Discharging"] 10
+                    , Run Volume "default" "Master" [] 10
+                    , Run Cpu [] 10
 		    , Run Memory ["-t","Mem: <usedratio>%"] 10
 		    , Run Date "%a %b %d %H:%M" "date" 10
 		    , Run XMonadLog
@@ -23,5 +25,5 @@ Config { font = "xft:Iosevka-10"
        , sepChar = "%"
        , alignSep = "}{"
        , template = "%XMonadLog%}\
-        	    \{ %cpu% | %memory% | %date%"
+        	    \{ %battery% | %default:Master% | %cpu% | %memory% | %date%"
        }
