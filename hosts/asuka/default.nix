@@ -12,7 +12,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
-  networking.hostName = "angel";
+  networking.hostName = "asuka";
 
   services.fprintd.enable = true;
   security.pam.services.login.fprintAuth = true;

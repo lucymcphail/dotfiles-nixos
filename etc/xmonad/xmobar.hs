@@ -1,19 +1,8 @@
-Config { font = "xft:Iosevka-10"
-       , border = NoBorder
+Config { font = "xft:Iosevka-12"
        , bgColor = "black"
        , fgColor = "white"
-       , alpha = 255
-       , position = Top
-       , textOffset = -1
-       , iconOffset = -1
-       , lowerOnStart = True
-       , pickBroadest = False
-       , persistent = False
-       , hideOnStart = False
-       , iconRoot = "."
+       , position = TopW L 90
        , allDesktops = True
-       , overrideRedirect = True
-       , textOutputFormat = Ansi
        , commands = [ Run Battery ["-t", "<acstatus>: <left>%, <timeleft>",
                                    "--", "-O", "Charging", "-i", "Charging", "-o", "Discharging"] 10
                     , Run Volume "default" "Master" [] 10

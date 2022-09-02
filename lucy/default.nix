@@ -45,17 +45,17 @@
 
   home.file = {
     ".emacs.d" = {
-      source = ../emacs;
+      source = ../etc/emacs;
       recursive = true;
     };
     ".config/xmonad/xmonad.hs" = {
-      source = ../xmonad/xmonad.hs;
+      source = ../etc/xmonad/xmonad.hs;
     };
     ".xmobarrc" = {
-      source = ../xmonad/xmobar.hs;
+      source = ../etc/xmonad/xmobar.hs;
     };
     ".config/kitty/kitty.conf" = {
-      source = ../kitty/kitty.conf;
+      source = ../etc/kitty/kitty.conf;
     };
   };
 
