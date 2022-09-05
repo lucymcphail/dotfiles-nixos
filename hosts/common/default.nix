@@ -8,8 +8,6 @@
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/London";

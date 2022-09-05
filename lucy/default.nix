@@ -18,9 +18,6 @@
 
   systemd.user.startServices = "sd-switch";
 
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = (pkg: true);
-
   home.packages = with pkgs; [
     dmenu
     firefox
