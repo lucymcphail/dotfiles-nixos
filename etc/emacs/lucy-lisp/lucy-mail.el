@@ -9,15 +9,15 @@
 
   (setq mu4e-completing-read-function #'completing-read)
 
-  (setq mu4e-sent-folder "/gmail/[Gmail]/Sent Mail"
-	mu4e-trash-folder "/gmail/[Gmail]/Trash"
-	mu4e-drafts-folder "/gmail/[Gmail]/Drafts")
+  (setq mu4e-sent-folder "/personal/[Gmail]/Sent Mail"
+	mu4e-trash-folder "/personal/[Gmail]/Trash"
+	mu4e-drafts-folder "/personal/[Gmail]/Drafts")
 
   (setq mu4e-maildir-shortcuts
-	'((:maildir "/gmail/INBOX" :key ?i)
-	  (:maildir "/gmail/[Gmail]/Sent Mail" :key ?s)
-	  (:maildir "/gmail/[Gmail]/Trash" :key ?t)
-	  (:maildir "/gmail/[Gmail]/All Mail" :key ?a)
+	'((:maildir "/personal/Inbox" :key ?i)
+	  (:maildir "/personal/[Gmail]/Sent Mail" :key ?s)
+	  (:maildir "/personal/[Gmail]/Trash" :key ?t)
+	  (:maildir "/personal/[Gmail]/All Mail" :key ?a)
 	  (:maildir "/university/Inbox" :key ?I)
 	  (:maildir "/university/Sent Items" :key ?S)
 	  (:maildir "/university/Deleted Items" :key ?T)
@@ -29,13 +29,13 @@
 	       :match-func
 	       (lambda (msg)
 		 (when msg
-		   (string-prefix-p "/gmail/[Gmail]"
+		   (string-prefix-p "/personal/[Gmail]"
 				    (mu4e-message-field msg :maildir))))
 	       :vars '((user-mail-address . "lucy.mcphail.p@gmail.com")
-		       (mu4e-sent-folder . "/gmail/[Gmail]/Sent Mail")
-		       (mu4e-trash-folder . "/gmail/[Gmail]/Trash")
-		       (mu4e-drafts-folder . "/gmail/[Gmail]/Drafts")
-		       (mu4e-refile-folder . "/gmail/[Gmail]/All Mail")
+		       (mu4e-sent-folder . "/personal/[Gmail]/Sent Mail")
+		       (mu4e-trash-folder . "/personal/[Gmail]/Trash")
+		       (mu4e-drafts-folder . "/personal/[Gmail]/Drafts")
+		       (mu4e-refile-folder . "/personal/[Gmail]/All Mail")
 		       (mu4e-sent-messages-behavior . delete)))
 	      (make-mu4e-context
 	       :name "university"
@@ -53,7 +53,7 @@
 
   (setq mu4e-bookmarks
 	'((:name "Unified inbox"
-		 :query "maildir:/gmail/INBOX OR maildir:/university/Inbox"
+		 :query "maildir:/personal/Inbox OR maildir:/university/Inbox"
 		 :key ?i)
 	  (:name "Today's messages" :query "date:today..now" :key ?t)
 	  (:name "Last 7 days" :query "date:7d..now" :hide-unread t :key ?w)))
@@ -85,6 +85,9 @@
 
   (mu4e t))
 
+;;; use w3m to render HTML mail
+(setq mm-text-html-renderer 'gnus-w3m)
+
 ;;; check for attachments
 (defun message-attachment-present-p ()
   (save-excursion
@@ -105,17 +108,5 @@
       (keyboard-quit))))
 
 (add-hook 'message-send-hook #'message-warn-if-no-attachments)
-
-;;; mail indicator
-(defun new-mail-p ()
-  (< 0
-     (string-to-number
-      (shell-command-to-string
-       (let ((maildir "$HOME/mail/*/INBOX/new/"))
-	 (concat "find "
-		 maildir
-		 " -type f | wc -l | sed 's/ //g'"))))))
-
-(setq display-time-mail-function #'new-mail-p)
 
 (provide 'lucy-mail)
