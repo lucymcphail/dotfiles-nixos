@@ -20,7 +20,6 @@
     comma
     firefox
     discord
-    haskellPackages.xmobar
     kitty
     vim
     stow

@@ -27,6 +27,11 @@
     };
   };
 
+  programs.xmobar = {
+    enable = true;
+    extraConfig = (builtins.readFile ../etc/xmonad/xmobar.hs);
+  };
+
   home.file = {
     ".config/xmonad/xmonad.hs" = {
       source = ../etc/xmonad/xmonad.hs;

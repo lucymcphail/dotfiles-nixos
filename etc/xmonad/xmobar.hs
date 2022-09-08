@@ -18,5 +18,5 @@ Config { font = "xft:Iosevka-12"
        , sepChar = "%"
        , alignSep = "}{"
        , template = "%XMonadLog%}\
-        	    \{ %battery% | %default:Master% | %cpu% | %memory% | Mail <%mail%> | %date%"
+        	    \{ %battery% | %default:Master% | %cpu% | %memory% | Mail (%mail%) | %date%"
        }
