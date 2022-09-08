@@ -18,15 +18,16 @@
 
   home.packages = with pkgs; [
     comma
+
     firefox
-    discord
     kitty
-    vim
     stow
-    spotify
-    emacs
-    wget
+    vim
     w3m
+    wget
+
+    (discord.override { nss = nss_latest; })
+    spotify
   ];
 
   services.emacs.enable = true;
