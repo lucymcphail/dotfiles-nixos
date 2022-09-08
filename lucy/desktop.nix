@@ -36,8 +36,5 @@
     ".config/xmonad/xmonad.hs" = {
       source = ../etc/xmonad/xmonad.hs;
     };
-    ".xmobarrc" = {
-      source = ../etc/xmonad/xmobar.hs;
-    };
   };
 }
