@@ -32,6 +32,12 @@
     extraConfig = (builtins.readFile ../etc/xmonad/xmobar.hs);
   };
 
+  services.picom = {
+    enable = true;
+    backend = "glx";
+    vSync = true;
+  };
+
   home.file = {
     ".config/xmonad/xmonad.hs" = {
       source = ../etc/xmonad/xmonad.hs;
