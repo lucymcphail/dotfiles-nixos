@@ -30,8 +30,12 @@
   ];
 
   services.emacs.enable = true;
-
   services.dropbox.enable = true;
+
+  home.keyboard = {
+    layout = "gb";
+    options = [ "ctrl:nocaps" "compose:ralt" ];
+  };
 
   home.file = {
     ".emacs.d" = {
