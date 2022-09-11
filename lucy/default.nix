@@ -19,6 +19,7 @@
   home.packages = with pkgs; [
     comma
 
+    emacs
     firefox
     kitty
     stow
