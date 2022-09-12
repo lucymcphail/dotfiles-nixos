@@ -29,7 +29,7 @@
 
     layout = "gb";
     xkbVariant = "";
-    xkbOptions = "ctrl:nocaps";
+    xkbOptions = "ctrl:nocaps,compose:ralt";
 
     displayManager.lightdm.enable = true;
 
