@@ -29,6 +29,7 @@
 
     (discord.override { nss = nss_latest; })
     spotify
+    zoom-us
   ];
 
   services.emacs.enable = true;
