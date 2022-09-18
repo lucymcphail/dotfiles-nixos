@@ -58,6 +58,8 @@
     libinput.touchpad.naturalScrolling = true;
   };
 
+  programs.zsh.enable = true;
+
   fonts.fonts = with pkgs; [
     noto-fonts
     noto-fonts-cjk
@@ -69,6 +71,7 @@
   users.users = {
     lucy = {
       isNormalUser = true;
+      shell = pkgs.zsh;
       description = "Lucy McPhail";
       extraGroups = [ "networkmanager" "wheel" ];
     };
