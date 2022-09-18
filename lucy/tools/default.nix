@@ -3,5 +3,6 @@
     ./git.nix
     ./gpg.nix
     ./mail.nix
+    ./zsh.nix
   ];
 }
