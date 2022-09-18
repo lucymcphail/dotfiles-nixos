@@ -69,7 +69,7 @@ in
     Unit = { Description = "Mailbox sychronization timer"; };
     Timer = {
       OnBootSec = "30";
-      OnUnitActiveSec = "5m";
+      OnUnitActiveSec = "15m";
     };
     Install = { WantedBy = [ "timers.target" ]; };
   };
