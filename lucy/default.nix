@@ -1,11 +1,7 @@
 { inputs, lib, config, pkgs, ... }:
 
 {
-  imports = [
-    ./tools
-
-    ./desktop.nix
-  ];
+  imports = [ ./tools ];
 
   home = rec {
     username = "lucy";
