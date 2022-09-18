@@ -18,10 +18,13 @@
 
   services.printing.enable = true;
 
-  sound.enable = true;
-  hardware.pulseaudio = {
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
     enable = true;
-    support32Bit = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
   };
 
   services.xserver = {
