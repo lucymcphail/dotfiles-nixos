@@ -15,7 +15,6 @@
   networking.hostName = "asuka";
 
   hardware.bluetooth.enable = true;
-  hardware.bluetooth.hsphfpd.enable = true;
 
   services.fprintd.enable = true;
   security.pam.services.login.fprintAuth = true;
