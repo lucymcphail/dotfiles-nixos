@@ -36,9 +36,6 @@
 
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
-
-    libinput.enable = true;
-    libinput.touchpad.naturalScrolling = true;
   };
 
   programs.zsh.enable = true;
