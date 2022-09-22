@@ -1,7 +1,10 @@
 { inputs, lib, config, pkgs, ... }:
 
 {
-  imports = [ ./tools ];
+  imports = [
+    ./desktop.nix
+    ./tools
+  ];
 
   home = rec {
     username = "lucy";
@@ -17,6 +20,7 @@
 
     emacs
     firefox-wayland
+    gnome3.gnome-terminal
     kitty
     ripgrep
     stow
