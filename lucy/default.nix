@@ -18,6 +18,7 @@
     emacs
     firefox-wayland
     kitty
+    ripgrep
     stow
     vim
     w3m
