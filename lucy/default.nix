@@ -16,7 +16,7 @@
     comma
 
     emacs
-    firefox
+    firefox-wayland
     kitty
     stow
     vim
