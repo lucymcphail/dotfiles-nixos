@@ -49,12 +49,12 @@
 	   :default-family "Iosevka"
 	   :default-weight regular
 	   :default-height 120
-	   :variable-pitch-family "Inter")
+	   :variable-pitch-family "Noto Sans")
 	  (presentation
 	   :default-family "Iosevka"
 	   :default-weight regular
 	   :default-height 240
-	   :variable-pitch-family "Inter")))
+	   :variable-pitch-family "Noto Sans")))
   (fontaine-set-preset 'regular))
 
 (provide 'lucy-appearance)
