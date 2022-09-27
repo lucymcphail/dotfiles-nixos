@@ -86,7 +86,8 @@
   (mu4e t))
 
 ;;; use w3m to render HTML mail
-(setq mm-text-html-renderer 'w3m-standalone)
+(use-package w3m)
+(setq mm-text-html-renderer 'w3m)
 
 ;;; check for attachments
 (defun message-attachment-present-p ()
