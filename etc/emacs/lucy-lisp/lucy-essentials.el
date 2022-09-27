@@ -36,6 +36,7 @@
   (global-whitespace-cleanup-mode t))
 
 (use-package elec-pair
+  :ensure nil
   :config
   (setq electric-pair-preserve-balance t)
   (add-function :before-until electric-pair-inhibit-predicate

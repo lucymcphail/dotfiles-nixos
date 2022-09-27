@@ -21,6 +21,8 @@
 	("elpa" . 1)
 	("nongnu" . 1)))
 
+(package-initialize)
+
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
