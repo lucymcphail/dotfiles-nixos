@@ -17,16 +17,19 @@
 
   home.packages = with pkgs; [
     comma
+    distrobox
 
     emacs
     firefox-wayland
-    gnome3.gnome-terminal
     kitty
+    obs-studio
     ripgrep
     stow
     vim
     w3m
     wget
+    zotero
+
 
     (discord.override { nss = nss_latest; })
     spotify
