@@ -13,18 +13,14 @@
 
 (setq shr-color-visible-luminance-min 80)
 
-(use-package modus-themes
-  :bind ("<f5>" . modus-themes-toggle)
+(use-package ef-themes
+  :bind ("C-c t" . ef-themes-toggle)
   :defer nil
   :init
-  (setq modus-themes-italic-constructs t
-	modus-themes-bold-constructs t
-	modus-themes-mixed-fonts t
-	modus-themes-syntax '(green-strings)
-	modus-themes-mode-line '(accented))
-  (modus-themes-load-themes)
+  (setq ef-themes-to-toggle '(ef-spring ef-autumn))
+  (setq ef-themes-mixed-fonts t)
   :config
-  (modus-themes-load-vivendi))
+  (ef-themes-select 'ef-spring))
 
 (use-package minions
   :config
@@ -48,13 +44,13 @@
 	'((regular
 	   :default-family "Iosevka"
 	   :default-weight regular
-	   :default-height 120
-	   :variable-pitch-family "Noto Sans")
+	   :default-height 140
+	   :variable-pitch-family "Inter")
 	  (presentation
 	   :default-family "Iosevka"
 	   :default-weight regular
 	   :default-height 240
-	   :variable-pitch-family "Noto Sans")))
+	   :variable-pitch-family "Inter")))
   (fontaine-set-preset 'regular))
 
 (provide 'lucy-appearance)
