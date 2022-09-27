@@ -48,12 +48,14 @@
     inter
   ];
 
+  virtualisation.docker.enable = true;
+
   users.users = {
     lucy = {
       isNormalUser = true;
       shell = pkgs.zsh;
       description = "Lucy McPhail";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" ];
     };
   };
 
