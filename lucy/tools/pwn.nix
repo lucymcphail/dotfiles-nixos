@@ -7,6 +7,7 @@
     ghidra
     pwndbg
     radare2
+    sage
     toybox
   ];
 }
