@@ -6,12 +6,24 @@
 (column-number-mode t)
 (show-paren-mode t)
 
-(setq display-time-24hr-format t
-      display-time-default-load-average nil)
+(setq tab-bar-tab-hints t
+      tab-bar-show t
+      tab-bar-close-button-show nil
+      tab-bar-format '(tab-bar-format-history
+		       tab-bar-format-tabs
+		       tab-bar-separator
+		       tab-bar-format-align-right
+		       tab-bar-format-global
+		       tab-bar-separator))
 
-(display-time-mode t)
+(tab-bar-mode t)
 
-(setq shr-color-visible-luminance-min 80)
+(use-package time
+  :after tab-bar
+  :config
+  (setq display-time-format "%a %d %B, %H:%M"
+	display-time-default-load-average nil)
+  (display-time-mode t))
 
 (use-package ef-themes
   :bind ("C-c t" . ef-themes-toggle)
