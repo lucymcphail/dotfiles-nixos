@@ -5,9 +5,12 @@
     (python3.withPackages (ps: with ps; [
       ipython
 
-      numpy
+      jupyter
       matplotlib
+      numpy
       pandas
+      scipy
+      sympy
 
       pwntools
       pycryptodomex
