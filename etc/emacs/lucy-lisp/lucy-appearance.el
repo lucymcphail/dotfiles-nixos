@@ -25,14 +25,18 @@
 	display-time-default-load-average nil)
   (display-time-mode t))
 
-(use-package ef-themes
-  :bind ("C-c t" . ef-themes-toggle)
+(use-package modus-themes
+  :bind ("C-c t" . modus-themes-toggle)
   :defer nil
   :init
-  (setq ef-themes-to-toggle '(ef-spring ef-autumn))
-  (setq ef-themes-mixed-fonts t)
+  (setq modus-themes-italic-constructs t
+	modus-themes-bold-constructs t
+	modus-themes-mixed-fonts t
+	modus-themes-syntax '(green-strings)
+	modus-themes-mode-line '(accented))
+  (modus-themes-load-themes)
   :config
-  (ef-themes-select 'ef-spring))
+  (modus-themes-load-operandi))
 
 (use-package minions
   :config
