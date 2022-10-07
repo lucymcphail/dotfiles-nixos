@@ -19,7 +19,6 @@
     comma
     distrobox
 
-    emacs
     firefox-wayland
     kitty
     obs-studio
@@ -37,14 +36,9 @@
     zoom-us
   ];
 
-  services.emacs.enable = true;
   services.dropbox.enable = true;
 
   home.file = {
-    ".emacs.d" = {
-      source = ../etc/emacs;
-      recursive = true;
-    };
     ".config/kitty/kitty.conf" = {
       source = ../etc/kitty/kitty.conf;
     };
