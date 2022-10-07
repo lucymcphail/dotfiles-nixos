@@ -38,11 +38,5 @@
 
   services.dropbox.enable = true;
 
-  home.file = {
-    ".config/kitty/kitty.conf" = {
-      source = ../etc/kitty/kitty.conf;
-    };
-  };
-
   home.stateVersion = "22.05";
 }
