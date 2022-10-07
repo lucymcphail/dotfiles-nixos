@@ -9,6 +9,8 @@ let
       expunge = "both";
     };
     msmtp.enable = true;
+
+    mu.enable = true;
   };
 in
 {
@@ -28,8 +30,6 @@ in
         };
         userName = address;
         passwordCommand = "${pass} ${imap.host}/${address}";
-
-        mu.enable = true;
       } // common;
       university = rec {
         address = "L.R.McPhail@sms.ed.ac.uk";
@@ -42,8 +42,6 @@ in
         };
         userName = "s2079454@ed.ac.uk";
         passwordCommand = "${pass} ${imap.host}/${address}";
-
-        mu.enable = true;
       } // common;
     };
   };
