@@ -25,6 +25,11 @@
 	display-time-default-load-average nil)
   (display-time-mode t))
 
+(use-package battery
+  :after tab-bar
+  :config
+  (display-battery-mode t))
+
 (use-package modus-themes
   :bind ("C-c t" . modus-themes-toggle)
   :defer nil
