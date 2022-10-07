@@ -25,6 +25,5 @@
 (require 'lucy-mail)
 (require 'lucy-org)
 (require 'lucy-tex)
-(require 'lucy-lsp)
 (require 'lucy-langs)
 (require 'lucy-writing)

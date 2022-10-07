@@ -4,9 +4,6 @@
   :config
   (editorconfig-mode t))
 
-(use-package cc-mode
-  :hook (c-mode-common . lsp-deferred))
-
 (use-package python
   :hook (python-mode . lsp-deferred)
   :config
