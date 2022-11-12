@@ -24,7 +24,6 @@
     obs-studio
     ripgrep
     stow
-    vim
     vlc
     w3m
     wget
