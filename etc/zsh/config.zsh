@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-# Prompt
+# prompt
 autoload -Uz vcs_info
 zstyle ':vcs_info:git:*' enable git svn
 zstyle ':vcs_info:git*' formats " (%b%u%c)"
@@ -11,7 +11,14 @@ zstyle ':vcs_info:git*' stagedstr "+"
 precmd() { vcs_info }
 setopt prompt_subst
 
-PROMPT='%F{cyan}%~%F{green}${vcs_info_msg_0_}%F{red}: %f'
+PROMPT='%F{green}%n@%m%F{white}:%F{cyan}%~%F{green}${vcs_info_msg_0_}%F{white} λ %f'
+
+# completion
+zstyle ':completion:*' completer _extensions _complete _approximate
+zstyle ':completion:*' menu select
+zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
+zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
+zstyle ':completion:*' group-name ''
 
 function zle_eval {
     echo -en "\e[2K\r"
