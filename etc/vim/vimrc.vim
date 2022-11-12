@@ -6,8 +6,6 @@ set wildoptions=pum
 
 set hlsearch
 set incsearch
-set ignorecase
-set smartcase
 
 " Colours
 let g:jellybeans_overrides = {
