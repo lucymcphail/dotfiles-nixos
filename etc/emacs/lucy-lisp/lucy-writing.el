@@ -7,7 +7,9 @@
   :bind
   (([remap narrow-to-region] . #'logos-narrow-dwim)
    ([remap forward-page] . #'logos-forward-page-dwim)
+   ("<next>" . #'logos-forward-page-dwim)
    ([remap backward-page] . #'logos-backward-page-dwim)
+   ("<prior>" . #'logos-backward-page-dwim)
    ("C-c l" . #'logos-focus-mode))
   :config
   (setq logos-outlines-are-pages t)

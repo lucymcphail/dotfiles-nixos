@@ -45,14 +45,14 @@
   (setq x-underline-at-descent-line t)
   (setq fontaine-presets
 	'((regular
-	   :default-family "Iosevka"
-	   :default-weight regular
-	   :default-height 140
+	   :default-family "Source Code Pro"
+	   :default-height 160
+	   :default-weight semibold
 	   :variable-pitch-family "Inter")
 	  (presentation
-	   :default-family "Iosevka"
-	   :default-weight regular
+	   :default-family "Source Code Pro"
 	   :default-height 240
+	   :default-weight semibold
 	   :variable-pitch-family "Inter")))
   (fontaine-set-preset 'regular))
 

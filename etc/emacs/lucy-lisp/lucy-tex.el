@@ -3,9 +3,7 @@
 (use-package auctex
   :hook
   ((LaTeX-mode . LaTeX-math-mode)
-   (LaTeX-mode . reftex-mode)
-   (LaTeX-mode . prettify-symbols-mode)
-   (LaTeX-mode . eglot-ensure))
+   (LaTeX-mode . reftex-mode))
   :init
   (require 'tex)
   (setq TeX-parse-self t
@@ -14,12 +12,9 @@
 	TeX-master t
 	TeX-source-correlate-mode t
 	TeX-source-correlate-start-server t)
+  (setq font-latex-fontify-script nil)
   (add-hook 'TeX-after-compilation-finished-functions
-	    #'TeX-revert-document-buffer)
-  ;; remove built-in `chktex' flymake backend
-  (defun disable-latex-flymake ()
-    (remove-hook 'flymake-diagnostic-functions #'LaTeX-flymake))
-  (advice-add #'TeX-latex-mode :after #'disable-latex-flymake))
+	    #'TeX-revert-document-buffer))
 
 (use-package pdf-tools
   :config
