@@ -50,25 +50,4 @@ in
   programs.msmtp.enable = true;
   programs.mu.enable = true;
 
-  systemd.user.services.mbsync = {
-    Unit = { Description = "Mailbox sychronization service"; };
-    Service =
-      let
-        mbsync = "${config.programs.mbsync.package}/bin/mbsync";
-        mu = "${pkgs.mu}/bin/mu";
-      in
-      {
-        Type = "oneshot";
-        ExecStart = "${mbsync} -Va";
-        ExecStartPost = "${mu} index";
-      };
-  };
-  systemd.user.timers.mbsync = {
-    Unit = { Description = "Mailbox sychronization timer"; };
-    Timer = {
-      OnBootSec = "30";
-      OnUnitActiveSec = "15m";
-    };
-    Install = { WantedBy = [ "timers.target" ]; };
-  };
 }
