@@ -10,6 +10,8 @@
     homeDirectory = "/home/${username}";
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   programs.home-manager.enable = true;
 
   systemd.user.startServices = "sd-switch";
@@ -18,6 +20,10 @@
     comma
     distrobox
 
+    man-pages
+    man-pages-posix
+
+    ed
     ffmpeg
     firefox-wayland
     kdeconnect
@@ -32,6 +38,7 @@
     zotero
 
     (discord.override { nss = nss_latest; })
+    obsidian
     spotify
     zoom-us
   ];
