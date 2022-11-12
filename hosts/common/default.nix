@@ -1,12 +1,11 @@
 { pkgs, inputs, ... }:
 
 {
-  nix = {
-    settings = {
-      experimental-features = "nix-command flakes";
-      auto-optimise-store = true;
-    };
-  };
+  imports = [
+    ./nix.nix
+  ];
+
+  nixpkgs.config.allowUnfree = true;
 
   networking.networkmanager.enable = true;
 
@@ -34,8 +33,12 @@
     xkbVariant = "";
     xkbOptions = "ctrl:nocaps,compose:ralt";
 
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    # displayManager.gdm.enable = true;
+    # desktopManager.gnome.enable = true;
+    displayManager.lightdm.enable = true;
+    displayManager.defaultSession = "plasmawayland";
+
+    desktopManager.plasma5.enable = true;
   };
 
   programs.zsh.enable = true;
@@ -55,5 +58,15 @@
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
+  };
+
+  networking.firewall = {
+    enable = true;
+    allowedTCPPortRanges = [
+      { from = 1714; to = 1764; } # KDE Connect
+    ];
+    allowedUDPPortRanges = [
+      { from = 1714; to = 1764; } # KDE Connect
+    ];
   };
 }
