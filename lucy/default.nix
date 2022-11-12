@@ -29,11 +29,13 @@
     wget
     zotero
 
-
     (discord.override { nss = nss_latest; })
     spotify
     zoom-us
   ];
+
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
 
   services.dropbox.enable = true;
 

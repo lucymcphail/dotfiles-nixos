@@ -7,7 +7,6 @@
 (setq confirm-kill-emacs #'y-or-n-p)
 (setq disabled-command-function nil)
 (setq compilation-ask-about-save nil)
-(setq sentence-end-double-space nil)
 (setq save-interprogram-paste-before-kill t)
 
 (global-auto-revert-mode 1)
@@ -42,5 +41,9 @@
   (add-function :before-until electric-pair-inhibit-predicate
 		(lambda (c) (eq c ?<)))
   (electric-pair-mode t))
+
+(use-package direnv
+ :config
+ (direnv-mode t))
 
 (provide 'lucy-essentials)

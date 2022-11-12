@@ -33,6 +33,7 @@
 
       # misc
       adaptive-wrap
+      direnv
       editorconfig
       elisp-slime-nav
       exec-path-from-shell
