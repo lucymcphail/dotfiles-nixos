@@ -40,12 +40,14 @@
       magit
       projectile
       rainbow-mode
+      restclient
       transpose-frame
       w3m
       whitespace-cleanup-mode
 
       # languages
       haskell-mode
+      hindent
       nix-mode
       python
       slime
@@ -54,6 +56,8 @@
   };
 
   services.emacs.enable = true;
+
+  home.packages = [ pkgs.ispell ];
 
   home.file = {
     ".emacs.d" = {
