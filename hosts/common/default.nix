@@ -40,14 +40,6 @@
 
   programs.zsh.enable = true;
 
-  fonts.fonts = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    iosevka
-    inter
-  ];
-
   virtualisation.docker.enable = true;
 
   users.users = {
