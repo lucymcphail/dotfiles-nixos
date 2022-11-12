@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# use emacs-style keys
+bindkey -e
+
 # prompt
 autoload -Uz vcs_info
 zstyle ':vcs_info:git:*' enable git svn

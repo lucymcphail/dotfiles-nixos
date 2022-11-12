@@ -39,4 +39,6 @@
   };
 
   home.packages = [ pkgs.universal-ctags ];
+
+  home.sessionVariables = { EDITOR = "vim"; };
 }
