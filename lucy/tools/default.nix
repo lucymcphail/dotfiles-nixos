@@ -7,6 +7,7 @@
     ./pwn.nix
     ./python.nix
     ./tex.nix
+    ./tmux.nix
     ./vim.nix
     ./zsh.nix
   ];
