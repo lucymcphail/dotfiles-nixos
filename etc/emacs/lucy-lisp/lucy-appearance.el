@@ -6,29 +6,11 @@
 (column-number-mode t)
 (show-paren-mode t)
 
-(setq tab-bar-tab-hints t
-      tab-bar-show t
-      tab-bar-close-button-show nil
-      tab-bar-format '(tab-bar-format-history
-		       tab-bar-format-tabs
-		       tab-bar-separator
-		       tab-bar-format-align-right
-		       tab-bar-format-global
-		       tab-bar-separator))
-
-(tab-bar-mode t)
-
 (use-package time
-  :after tab-bar
   :config
-  (setq display-time-format "%a %d %B, %H:%M"
+  (setq display-time-format "%H:%M"
 	display-time-default-load-average nil)
   (display-time-mode t))
-
-(use-package battery
-  :after tab-bar
-  :config
-  (display-battery-mode t))
 
 (use-package modus-themes
   :bind ("C-c t" . modus-themes-toggle)
@@ -41,7 +23,7 @@
 	modus-themes-mode-line '(accented))
   (modus-themes-load-themes)
   :config
-  (modus-themes-load-operandi))
+  (modus-themes-load-vivendi))
 
 (use-package minions
   :config
