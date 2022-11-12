@@ -16,7 +16,7 @@
       contributors = "shortlog --summary --numbered";
     };
 
-    ignores = [ "*~" "*.swp""tags" ];
+    ignores = [ "*~" "*.swp" "tags" ];
 
     signing = {
       signByDefault = true;
