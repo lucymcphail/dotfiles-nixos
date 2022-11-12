@@ -1,4 +1,3 @@
-set list
 set lazyredraw
 set wildcharm=<C-z>
 set wildignorecase
