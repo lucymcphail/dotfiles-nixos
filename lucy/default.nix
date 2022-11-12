@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./desktop.nix
     ./tools
   ];
 
@@ -19,9 +18,12 @@
     comma
     distrobox
 
+    ffmpeg
     firefox-wayland
+    kdeconnect
     kitty
     obs-studio
+    plasma-browser-integration
     ripgrep
     stow
     vlc
@@ -33,6 +35,8 @@
     spotify
     zoom-us
   ];
+
+  nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
 
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
