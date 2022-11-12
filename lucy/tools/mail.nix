@@ -50,4 +50,5 @@ in
   programs.msmtp.enable = true;
   programs.mu.enable = true;
 
+  home.packages = [ pkgs.thunderbird-wayland ];
 }
