@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 
 {
   programs.zsh = {
@@ -6,7 +6,6 @@
 
     enableCompletion = true;
     enableSyntaxHighlighting = true;
-    enableAutosuggestions = true;
 
     initExtra = builtins.readFile ../../etc/zsh/config.zsh;
 
@@ -28,4 +27,8 @@
       "..." = "cd ../..";
     };
   };
+
+  programs.zoxide.enable = true;
+
+  home.packages = with pkgs; [ fzf ];
 }
