@@ -29,6 +29,7 @@
     kdeconnect
     kitty
     obs-studio
+    pandoc
     plasma-browser-integration
     ripgrep
     stow
