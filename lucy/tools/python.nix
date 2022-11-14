@@ -9,6 +9,7 @@
       matplotlib
       numpy
       pandas
+      pillow
       scipy
       sympy
 
