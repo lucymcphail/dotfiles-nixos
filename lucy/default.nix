@@ -20,6 +20,7 @@
     comma
     distrobox
 
+    coreutils
     man-pages
     man-pages-posix
 
