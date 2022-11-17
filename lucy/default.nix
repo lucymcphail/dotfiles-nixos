@@ -52,4 +52,6 @@
   services.dropbox.enable = true;
 
   home.stateVersion = "22.05";
+
+  home.file.girl.text = "nyaaa~\n";
 }
