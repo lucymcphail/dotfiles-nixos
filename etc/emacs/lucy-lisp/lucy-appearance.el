@@ -23,7 +23,7 @@
 	modus-themes-mode-line '(accented))
   (modus-themes-load-themes)
   :config
-  (modus-themes-load-vivendi))
+  (modus-themes-load-operandi))
 
 (use-package minions
   :config
