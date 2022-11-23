@@ -7,11 +7,7 @@ set wildoptions=pum
 set hlsearch
 set incsearch
 
-" Colours
-let g:jellybeans_overrides = {
-\    'background': { 'guibg': '000000' },
-\}
-
+set termguicolors
 color jellybeans
 
 " Status line
