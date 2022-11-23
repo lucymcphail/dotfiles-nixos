@@ -6,12 +6,6 @@
 (column-number-mode t)
 (show-paren-mode t)
 
-(use-package time
-  :config
-  (setq display-time-format "%H:%M"
-	display-time-default-load-average nil)
-  (display-time-mode t))
-
 (use-package modus-themes
   :bind ("C-c t" . modus-themes-toggle)
   :defer nil
