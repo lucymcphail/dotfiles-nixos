@@ -4,6 +4,7 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
+    eb-garamond
     source-code-pro
     inter
     iosevka
