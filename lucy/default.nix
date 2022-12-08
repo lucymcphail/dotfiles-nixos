@@ -38,8 +38,6 @@
     wget
     zotero
 
-    (discord.override { nss = nss_latest; })
-    obsidian
     spotify
     zoom-us
   ];
