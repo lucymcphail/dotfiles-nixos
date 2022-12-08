@@ -26,7 +26,6 @@
 
     ed
     ffmpeg
-    firefox-wayland
     kdeconnect
     kitty
     obs-studio

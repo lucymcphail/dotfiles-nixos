@@ -2,6 +2,7 @@
   imports = [
     ./agda.nix
     ./emacs.nix
+    ./firefox.nix
     ./fonts.nix
     ./git.nix
     ./gpg.nix
