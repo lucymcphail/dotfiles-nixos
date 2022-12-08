@@ -36,5 +36,9 @@
   # high-resolution display
   hardware.video.hidpi.enable = lib.mkDefault true;
 
+  services.power-profiles-daemon.enable = false;
+  services.auto-cpufreq.enable = true;
+  services.thermald.enable = true;
+
   nixpkgs.hostPlatform = "x86_64-linux";
 }
