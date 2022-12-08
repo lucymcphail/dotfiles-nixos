@@ -1,5 +1,6 @@
 {
   imports = [
+    ./agda.nix
     ./emacs.nix
     ./fonts.nix
     ./git.nix

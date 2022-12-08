@@ -46,6 +46,7 @@
       whitespace-cleanup-mode
 
       # languages
+      agda2-mode
       haskell-mode
       hindent
       nix-mode
