@@ -9,15 +9,14 @@
 (use-package modus-themes
   :bind ("C-c t" . modus-themes-toggle)
   :defer nil
-  :init
+  :config
   (setq modus-themes-italic-constructs t
 	modus-themes-bold-constructs t
-	modus-themes-mixed-fonts t
-	modus-themes-syntax '(green-strings)
-	modus-themes-mode-line '(accented))
-  (modus-themes-load-themes)
-  :config
-  (modus-themes-load-operandi))
+	modus-themes-fringes nil
+	modus-vivendi-palette-overrides
+	'((bg-mode-line-active bg-magenta-subtle)
+	  (comment magenta-faint)))
+  (load-theme 'modus-vivendi :no-confirm))
 
 (use-package minions
   :config
@@ -40,7 +39,7 @@
   (setq fontaine-presets
 	'((regular
 	   :default-family "Iosevka Comfy Fixed"
-	   :default-height 160
+	   :default-height 120
 	   :default-weight regular
 	   :variable-pitch-family "Inter")
 	  (presentation

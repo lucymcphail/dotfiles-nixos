@@ -1,58 +1,16 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
+let
+  emacs-overlay = inputs.emacs-overlay.packages.${pkgs.system};
+in
 {
   programs.emacs = {
     enable = true;
+    package = emacs-overlay.emacsPgtk;
 
     extraPackages = epkgs: with epkgs; [
-      use-package
-
-      # appearance
-      modus-themes
-      minions
-      fontaine
-
-      # completion
-      vertico
-      orderless
-      marginalia
-      consult
-      consult-dir
-      corfu
-      corfu-doc
-      cape
-      pcmpl-args
-
-      # writing
-      org
-      auctex
       pdf-tools
-      olivetti
-      logos
-      laas
-
-      # misc
-      adaptive-wrap
-      direnv
-      editorconfig
-      elisp-slime-nav
-      exec-path-from-shell
-      magit
-      projectile
-      rainbow-mode
-      restclient
-      transpose-frame
-      w3m
-      whitespace-cleanup-mode
-
-      # languages
-      agda2-mode
-      haskell-mode
-      hindent
-      nix-mode
-      python
-      slime
-      web-mode
+      vterm
     ];
   };
 

@@ -4,7 +4,7 @@
   :hook
   ((LaTeX-mode . LaTeX-math-mode)
    (LaTeX-mode . reftex-mode))
-  :init
+  :config
   (require 'tex)
   (setq TeX-parse-self t
 	TeX-save-query nil
@@ -18,7 +18,7 @@
 
 (use-package pdf-tools
   :config
-  (pdf-loader-install))
+  (pdf-tools-install))
 
 (use-package laas
   :hook (LaTeX-mode . laas-mode))

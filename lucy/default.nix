@@ -24,14 +24,21 @@
     man-pages
     man-pages-posix
 
+    gcc
+    nodejs
+
+    ark
     ed
     ffmpeg
     kdeconnect
     kitty
+    libreoffice
+    gnumake
     obs-studio
     pandoc
     plasma-browser-integration
     ripgrep
+    signal-desktop
     stow
     vlc
     w3m

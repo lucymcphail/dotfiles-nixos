@@ -1,6 +1,5 @@
 {
   imports = [
-    ./agda.nix
     ./emacs.nix
     ./firefox.nix
     ./fonts.nix
@@ -13,5 +12,9 @@
     ./tmux.nix
     ./vim.nix
     ./zsh.nix
+
+    ./agda.nix
+    ./haskell.nix
+    ./idris.nix
   ];
 }

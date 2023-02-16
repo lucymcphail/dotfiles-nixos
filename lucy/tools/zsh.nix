@@ -20,9 +20,6 @@
       ec = "emacsclient -c";
       g = "git";
 
-      nupdate = "sudo nixos-rebuild switch --flake ~/dotfiles";
-      hmupdate = "home-manager switch --flake ~/dotfiles";
-
       ".." = "cd ..";
       "..." = "cd ../..";
     };

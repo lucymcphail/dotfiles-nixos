@@ -50,35 +50,17 @@
   :config
   (setq consult-dir-project-list-function #'consult-dir-projectile-dirs))
 
-(use-package corfu
+(use-package company
   :custom
-  (corfu-cycle t)
-  (corfu-separator ?\s)
-  (corfu-quit-at-boundary nil)
-  (corfu-quit-no-match nil)
-  (corfu-preview-current nil)
-  (corfu-echo-documentation nil)
-  :init
-  (global-corfu-mode)
-  (setq tab-always-indent 'complete)
-  :config
-  (defun corfu-enable-always-in-minibuffer ()
-    "Enable Corfu in the minibuffer if Vertico/Mct are not active."
-    (unless (or (bound-and-true-p mct--active)
-		(bound-and-true-p vertico--input))
-      (corfu-mode 1)))
-  (add-hook 'minibuffer-setup-hook #'corfu-enable-always-in-minibuffer 1))
-
-(use-package corfu-doc
-  :hook
-  (corfu-mode . corfu-doc-mode))
-
-(use-package cape
-  :config
-  (setq cape-dabbrev-min-length 3)
-  (dolist (backend '(cape-symbol cape-keyword cape-file cape-dabbrev))
-    (add-to-list 'completion-at-point-functions backend)))
-
-(use-package pcmpl-args)
+  (company-dabbrev-other-buffers t)
+  (company-dabbrev-code-other-buffers t)
+  (company-show-numbers t)
+  (company-minimum-prefix-length 3)
+  (company-dabbrev-downcase nil)
+  (company-dabbrev-ignore-case t)
+  (company-idle-delay 0.2)
+  (company-global-modes '(not eshell-mode shell-mode))
+  :hook ((text-mode . company-mode)
+	 (prog-mode . company-mode)))
 
 (provide 'lucy-completion)

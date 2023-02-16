@@ -1,7 +1,7 @@
 ;; -*- lexical-binding: t -*-
 
 (use-package mu4e
-  :ensure nil
+  :straight nil
   :if (executable-find "mu")
   :bind ("C-c m" . mu4e)
   :config

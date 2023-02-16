@@ -15,3 +15,6 @@
 (blink-cursor-mode -1)
 
 (setq native-comp-async-report-warnings-errors 'silent)
+
+(require 'package)
+(setq package-enable-at-startup nil)

@@ -6,6 +6,7 @@
       ipython
 
       jupyter
+      jupyterlab
       matplotlib
       numpy
       pandas
@@ -17,4 +18,16 @@
       pycryptodomex
     ]))
   ];
+
+  xdg.desktopEntries = {
+    jupyterlabDesktopItem = {
+      name = "Jupyter Lab";
+      exec = "jupyter-lab %f";
+      comment = "Run Jupyter Lab";
+      terminal = true;
+      icon = "notebook";
+      startupNotify = true;
+      mimeType = [ "application/x-ipynb+json" ];
+    };
+  };
 }

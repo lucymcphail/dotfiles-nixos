@@ -8,6 +8,7 @@
 (setq disabled-command-function nil)
 (setq compilation-ask-about-save nil)
 (setq save-interprogram-paste-before-kill t)
+(setq sentence-end-double-space nil)
 
 (global-auto-revert-mode 1)
 (setq global-auto-revert-non-file-buffers t
@@ -43,8 +44,10 @@
 		(lambda (c) (eq c ?<)))
   (electric-pair-mode t))
 
-(use-package direnv
- :config
- (direnv-mode t))
+(use-package envrc
+  :defer nil
+  :bind ("C-c e" . envrc-command-map)
+  :config
+  (envrc-global-mode t))
 
 (provide 'lucy-essentials)

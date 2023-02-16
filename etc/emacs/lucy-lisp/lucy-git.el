@@ -19,7 +19,7 @@
   :bind
   (("C-x g" . magit)
    ("C-x M-g" . magit-dispatch))
-  :init
+  :config
   (require 'magit-diff)
   (setq magit-diff-refine-hunk t)
   (require 'magit-repos))

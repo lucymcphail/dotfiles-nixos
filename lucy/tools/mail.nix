@@ -7,6 +7,9 @@ let
       enable = true;
       create = "maildir";
       expunge = "both";
+      extraConfig.account = {
+        AuthMechs = "XOAUTH2";
+      };
     };
     msmtp.enable = true;
 
@@ -22,26 +25,14 @@ in
       personal = rec {
         primary = true;
         address = "lucy.mcphail.p@gmail.com";
-
-        imap.host = "imap.gmail.com";
-        smtp = {
-          host = "smtp.gmail.com";
-          tls.enable = true;
-        };
-        userName = address;
-        passwordCommand = "${pass} ${imap.host}/${address}";
+        flavor = "gmail.com";
+        passwordCommand = "${pass} ${address}";
       } // common;
       university = rec {
         address = "L.R.McPhail@sms.ed.ac.uk";
-
-        imap.host = "outlook.office365.com";
-        smtp = {
-          host = "smtp.office365.com";
-          tls.enable = true;
-          tls.useStartTls = true;
-        };
+        flavor = "outlook.office365.com";
         userName = "s2079454@ed.ac.uk";
-        passwordCommand = "${pass} ${imap.host}/${address}";
+        passwordCommand = "${pass} ${address}";
       } // common;
     };
   };

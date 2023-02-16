@@ -9,6 +9,7 @@
     inter
     iosevka
     iosevka-comfy.comfy-fixed
+    julia-mono
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
